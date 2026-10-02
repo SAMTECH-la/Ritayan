@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+public-website/node_modules/
+admin-panel/node_modules/
+
+# Production Builds
+public-website/dist/
+admin-panel/dist/
+
+# System / Scratch files
+.system_generated/
+scratch/
+.env
+.env.local
+.DS_Store
+Thumbs.db

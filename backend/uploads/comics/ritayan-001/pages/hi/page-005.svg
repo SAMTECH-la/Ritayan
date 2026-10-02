@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1130" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#FDE68A"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="1130" fill="url(#bg)"/>
+
+  <rect x="25" y="25" width="750" height="1080" fill="none" stroke="url(#gold)" stroke-width="4" rx="10"/>
+  <rect x="35" y="35" width="730" height="1060" fill="none" stroke="#2563EB" stroke-width="1.5" rx="8" opacity="0.6"/>
+
+  <circle cx="45" cy="45" r="12" fill="url(#gold)" opacity="0.8"/>
+  <circle cx="755" cy="45" r="12" fill="url(#gold)" opacity="0.8"/>
+  <circle cx="45" cy="1085" r="12" fill="url(#gold)" opacity="0.8"/>
+  <circle cx="755" cy="1085" r="12" fill="url(#gold)" opacity="0.8"/>
+
+  <path d="M 150 40 L 650 40 L 630 85 L 170 85 Z" fill="#111827" stroke="url(#gold)" stroke-width="2"/>
+  <text x="400" y="68" fill="#FDE68A" font-family="'Cinzel', 'Georgia', serif" font-size="22" font-weight="bold" text-anchor="middle" letter-spacing="3">MATSYA — प्रलय से पहले</text>
+
+  <g transform="translate(60, 110)">
+    <rect width="680" height="380" fill="#030712" rx="6" stroke="#4B5563" stroke-width="2"/>
+    <circle cx="340" cy="190" r="140" fill="#2563EB" opacity="0.15" filter="url(#glow)"/>
+    <path d="M 340 70 L 420 310 L 260 310 Z" fill="none" stroke="url(#gold)" stroke-width="3" opacity="0.4"/>
+    <circle cx="340" cy="190" r="60" fill="none" stroke="#FDE68A" stroke-width="2"/>
+    <circle cx="340" cy="190" r="12" fill="#F59E0B"/>
+    
+    <rect x="40" y="30" width="300" height="85" fill="#1F2937" rx="8" stroke="url(#gold)" stroke-width="1.5" opacity="0.95"/>
+    <text x="55" y="55" fill="#F3F4F6" font-family="sans-serif" font-size="14" font-weight="bold">CHAPTER VOICE</text>
+    <text x="55" y="80" fill="#9CA3AF" font-family="sans-serif" font-size="13">"मत्स्य रूप में भगवान विष्णु ने हयग्रीव दानव का वध कर वेदों की पुनर्स्थापना की।"</text>
+
+    <path d="M 360 260 Q 400 230 460 240 Q 520 250 560 290 Q 500 310 440 295 Z" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+    <text x="460" y="275" fill="#78350F" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">"सत्य ज्ञान पुनः सुरक्षित हो गया!"</text>
+  </g>
+
+  <g transform="translate(60, 510)">
+    <rect width="330" height="480" fill="#030712" rx="6" stroke="#4B5563" stroke-width="2"/>
+    <path d="M 50 120 C 120 40, 210 200, 280 100" fill="none" stroke="#2563EB" stroke-width="4"/>
+    <circle cx="165" cy="240" r="80" fill="none" stroke="url(#gold)" stroke-dasharray="8 4" stroke-width="2"/>
+    <text x="165" y="440" fill="#E5E7EB" font-family="sans-serif" font-size="14" text-anchor="middle" font-weight="bold">RITAYAN MYTHOS PANEL A</text>
+  </g>
+
+  <g transform="translate(410, 510)">
+    <rect width="330" height="480" fill="#030712" rx="6" stroke="#4B5563" stroke-width="2"/>
+    <rect x="30" y="30" width="270" height="200" fill="#2563EB" opacity="0.2" rx="4"/>
+    <polygon points="165,50 240,180 90,180" fill="url(#gold)" opacity="0.5"/>
+    <rect x="20" y="360" width="290" height="90" fill="#111827" rx="6" stroke="#D97706" stroke-width="1"/>
+    <text x="35" y="388" fill="#FDE68A" font-family="sans-serif" font-size="13" font-weight="bold">GAATHA ARCHIVE</text>
+    <text x="35" y="412" fill="#D1D5DB" font-family="sans-serif" font-size="12">When dark clouds gather over time, the eternal avatar emerges.</text>
+  </g>
+
+  <line x1="60" y1="1055" x2="740" y2="1055" stroke="url(#gold)" stroke-width="1.5"/>
+  <text x="400" y="1078" fill="#F3F4F6" font-family="'Cinzel', Georgia, serif" font-size="15" font-weight="bold" text-anchor="middle">— Page 5 of 5 —</text>
+</svg>

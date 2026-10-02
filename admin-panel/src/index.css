@@ -1,0 +1,23 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: #0F172A;
+  color: #F8FAFC;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, .font-serif {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.devanagari {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
