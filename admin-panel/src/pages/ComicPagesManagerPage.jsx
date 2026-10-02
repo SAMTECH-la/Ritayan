@@ -236,10 +236,15 @@ const ComicPagesManagerPage = () => {
 
       {/* Batch Upload Additional Pages */}
       <form onSubmit={handleUploadNewPages} className="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
-        <h3 className="text-sm font-bold font-serif text-amber-400 uppercase flex items-center gap-2">
-          <Upload className="w-4 h-4" />
-          <span>Upload Pages ({LANGUAGES.find(l=>l.code===selectedLang)?.label})</span>
-        </h3>
+        <div>
+          <h3 className="text-sm font-bold font-serif text-amber-400 uppercase flex items-center gap-2">
+            <Upload className="w-4 h-4" />
+            <span>Upload Pages ({LANGUAGES.find(l=>l.code===selectedLang)?.label})</span>
+          </h3>
+          <p className="text-[11px] text-slate-400 mt-1">
+            Supports high-resolution images & SVGs up to <strong className="text-amber-400">1 GB per file</strong>.
+          </p>
+        </div>
         
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <input 

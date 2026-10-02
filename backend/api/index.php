@@ -1,6 +1,13 @@
 <?php
 // backend/api/index.php
 
+// Configure PHP upload limits for large files up to 1 GB
+@ini_set('upload_max_filesize', '1024M');
+@ini_set('post_max_size', '1024M');
+@ini_set('memory_limit', '1024M');
+@ini_set('max_execution_time', '1800');
+@ini_set('max_input_time', '1800');
+
 header('Content-Type: application/json');
 
 require_once __DIR__ . '/../config/database.php';

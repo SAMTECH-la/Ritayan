@@ -9,6 +9,17 @@ const Navbar = ({ siteTitle }) => {
   const { language, setLanguage, t } = useLanguage();
   const navigate = useNavigate();
 
+  React.useEffect(() => {
+    const handleKeyDown = (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'a') {
+        e.preventDefault();
+        window.location.href = '/admin';
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
@@ -23,22 +34,28 @@ const Navbar = ({ siteTitle }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 no-underline group">
-            <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-400 via-amber-600 to-amber-800 p-0.5 shadow-lg group-hover:scale-105 transition-transform">
-              <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
-                <BookOpen className="w-6 h-6 text-amber-400 group-hover:rotate-12 transition-transform" />
+          {/* Logo with Secret Double-Click Redirect to Admin */}
+          <div 
+            onDoubleClick={() => { window.location.href = '/admin'; }}
+            className="flex items-center gap-3 group cursor-pointer"
+            title="Double-click for Admin Portal"
+          >
+            <Link to="/" className="flex items-center gap-3 no-underline">
+              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-400 via-amber-600 to-amber-800 p-0.5 shadow-lg group-hover:scale-105 transition-transform">
+                <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
+                  <BookOpen className="w-6 h-6 text-amber-400 group-hover:rotate-12 transition-transform" />
+                </div>
               </div>
-            </div>
-            <div>
-              <span className="text-xl font-bold font-serif tracking-wider gold-text-gradient block">
-                RITAYAN
-              </span>
-              <span className="text-[10px] tracking-[0.2em] font-semibold text-slate-400 devanagari block">
-                {t('tagline')}
-              </span>
-            </div>
-          </Link>
+              <div>
+                <span className="text-xl font-bold font-serif tracking-wider gold-text-gradient block">
+                  RITAYAN
+                </span>
+                <span className="text-[10px] tracking-[0.2em] font-semibold text-slate-400 devanagari block">
+                  {t('tagline')}
+                </span>
+              </div>
+            </Link>
+          </div>
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center gap-8 text-sm font-semibold">

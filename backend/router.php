@@ -1,6 +1,12 @@
 <?php
 // backend/router.php - Unified Router script for PHP server
 
+@ini_set('upload_max_filesize', '1024M');
+@ini_set('post_max_size', '1024M');
+@ini_set('memory_limit', '1024M');
+@ini_set('max_execution_time', '1800');
+@ini_set('max_input_time', '1800');
+
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 // Helper function for serving files with MIME types

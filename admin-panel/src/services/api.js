@@ -16,6 +16,9 @@ const API_BASE_URL = getApiBaseUrl();
 
 const api = axios.create({
   baseURL: API_BASE_URL,
+  maxContentLength: 1024 * 1024 * 1024, // 1 GB
+  maxBodyLength: 1024 * 1024 * 1024,    // 1 GB
+  timeout: 1800000,                      // 30 minutes timeout for up to 1 GB uploads
 });
 
 api.interceptors.request.use((config) => {

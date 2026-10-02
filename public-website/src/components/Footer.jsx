@@ -105,9 +105,13 @@ const Footer = ({ settings }) => {
 
         </div>
 
-        <div className="border-t border-slate-900 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-[11px]">
+        <div 
+          onDoubleClick={() => { window.location.href = '/admin'; }}
+          className="border-t border-slate-900 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-[11px] cursor-pointer"
+          title="Double-click for Admin Portal"
+        >
           <p>© {new Date().getFullYear()} RITAYAN — युगों की गाथा. All rights reserved.</p>
-          <p className="text-slate-500">Premium Digital Graphic Novel Experience</p>
+          <p className="text-slate-500 hover:text-amber-400 transition">Premium Digital Graphic Novel Experience</p>
         </div>
       </div>
     </footer>
