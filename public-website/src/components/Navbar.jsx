@@ -9,11 +9,19 @@ const Navbar = ({ siteTitle }) => {
   const { language, setLanguage, t } = useLanguage();
   const navigate = useNavigate();
 
+  const redirectToAdmin = () => {
+    if (window.location.port === '5173') {
+      window.location.href = 'http://localhost:5174';
+    } else {
+      window.location.href = '/admin';
+    }
+  };
+
   React.useEffect(() => {
     const handleKeyDown = (e) => {
       if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'a') {
         e.preventDefault();
-        window.location.href = '/admin';
+        redirectToAdmin();
       }
     };
     window.addEventListener('keydown', handleKeyDown);
@@ -36,7 +44,7 @@ const Navbar = ({ siteTitle }) => {
           
           {/* Logo with Secret Double-Click Redirect to Admin */}
           <div 
-            onDoubleClick={() => { window.location.href = '/admin'; }}
+            onDoubleClick={redirectToAdmin}
             className="flex items-center gap-3 group cursor-pointer"
             title="Double-click for Admin Portal"
           >

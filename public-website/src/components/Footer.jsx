@@ -106,7 +106,13 @@ const Footer = ({ settings }) => {
         </div>
 
         <div 
-          onDoubleClick={() => { window.location.href = '/admin'; }}
+          onDoubleClick={() => { 
+            if (window.location.port === '5173') {
+              window.location.href = 'http://localhost:5174';
+            } else {
+              window.location.href = '/admin';
+            }
+          }}
           className="border-t border-slate-900 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-[11px] cursor-pointer"
           title="Double-click for Admin Portal"
         >

@@ -6,11 +6,11 @@ class Database {
 
     public static function getConnection() {
         if (self::$conn === null) {
-            $host     = getenv('DB_HOST') ?: 'sql211.infinityfree.com';
+            $host     = getenv('DB_HOST') ?: '127.0.0.1';
             $port     = getenv('DB_PORT') ?: '3306';
-            $db_name  = getenv('DB_NAME') ?: 'if0_43070469_ritayan_db';
-            $username = getenv('DB_USER') ?: 'if0_43070469';
-            $password = getenv('DB_PASS') !== false ? getenv('DB_PASS') : 'SAMARTH2010';
+            $db_name  = getenv('DB_NAME') ?: 'ritayan_db';
+            $username = getenv('DB_USER') ?: 'root';
+            $password = getenv('DB_PASS') !== false ? getenv('DB_PASS') : '';
 
             try {
                 // First try creating DB if permitted (for local dev)
